@@ -1,0 +1,574 @@
+wilder@wilder-ThinkPad-T430:~/Documents$ cd
+wilder@wilder-ThinkPad-T430:~$ pwd
+/home/wilder
+wilder@wilder-ThinkPad-T430:~$ mkdir quetes
+mkdir: impossible de créer le répertoire «quetes»: Le fichier existe
+wilder@wilder-ThinkPad-T430:~$ rmdir quetes/shell/effacez-moi quetes/shell/delete.me
+rmdir: impossible de supprimer 'quetes/shell/effacez-moi': Aucun fichier ou dossier de ce type
+rmdir: impossible de supprimer 'quetes/shell/delete.me': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~$ cd ~/quetes/shell 
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ touch pomme 
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ touch poire
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ touch carotte chou-rave chou-fleur courgette
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ ls -l/.bashrc
+ls : option invalide -- '/'
+Saisissez « ls --help » pour plus d'informations.
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ ls -l /.bashrc
+ls: impossible d'accéder à '/.bashrc': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cp pomme banane
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cp pomme fruits/orange
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ ls ; ls fruits
+banane   chou-fleur  courgette  legumes      poire
+carotte  chou-rave   fruits     planets.zip  pomme
+banane  kiwi  orange  pamplemousse  poire  pomme
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cp po* banane fruits/ 
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ ls fruits 
+banane  kiwi  orange  pamplemousse  poire  pomme
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cp -R fruits copie-de-fruits
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cp -R fruits copie-de-fruits /tmp/
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ rm po*banane
+rm: impossible de supprimer 'po*banane': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ rm po* banane
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ rm -r copie-de-fruits
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ mv carotte chou* courgette legumes/
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ mv fruits/orange fruits/pamplemoussewilder@wilder-ThinkPad-T430:~/quetes/shell$ mv legumes/courgette fruits/kiwi
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cd ~/quetes/shell
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ wget https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+--2020-03-03 16:32:42--  https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+Résolution de github.com (github.com)… 140.82.118.4
+Connexion à github.com (github.com)|140.82.118.4|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://raw.githubusercontent.com/bhubr/bhubr.github.io/master/wild/planets.zip [suivant]
+--2020-03-03 16:32:43--  https://raw.githubusercontent.com/bhubr/bhubr.github.io/master/wild/planets.zip
+Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.192.133, 151.101.128.133, 151.101.64.133, ...
+Connexion à raw.githubusercontent.com (raw.githubusercontent.com)|151.101.192.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 300234 (293K) [application/zip]
+Enregistre : «planets.zip.1»
+
+planets.zip.1       100%[===================>] 293,20K  1,81MB/s    ds 0,2s    
+
+2020-03-03 16:32:43 (1,81 MB/s) - «planets.zip.1» enregistré [300234/300234]
+
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ unzip planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ eog planets
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cd planets
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mkdir real fictional inhabited 
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+arrakis.jpeg    earth.jpeg  jupiter.jpeg  neptune.jpeg  saturn.jpeg
+coruscant.jpeg  fictional   mars.jpeg     pluto.jpeg    uranus.jpeg
+cybertron.jpeg  inhabited   mercury.jpeg  real          venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ mkdir telluric gas-giants dwarf-planets
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd planets
+bash: cd: planets: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv arrakis.jpeg fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv coruscant.jpeg fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv cybertron.jpeg fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv earth.jpeg real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv jupiter.jpeg neptune.jpeg saturn.jpg mars.jpeg pluto.jpeg uranus.jpeg mercury.jpeg venus.jpeg real
+mv: impossible d'évaluer 'saturn.jpg': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv jupiter.jpeg neptune.jpeg saturn.jpg mars.jpeg pluto.jpeg uranus.jpeg mercury.jpeg venus.jpeg real
+mv: impossible d'évaluer 'jupiter.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'neptune.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'saturn.jpg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'mars.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'pluto.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'uranus.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'mercury.jpeg': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'venus.jpeg': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv jupiter.jpeg real
+mv: impossible d'évaluer 'jupiter.jpeg': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ mv mars.jpeg real
+mv: impossible d'évaluer 'mars.jpeg': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls
+dwarf-planets  jupiter.jpeg  neptune.jpeg  uranus.jpeg
+earth.jpeg     mars.jpeg     pluto.jpeg    venus.jpeg
+gas-giants     mercury.jpeg  telluric
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cp dwarf-planets inhabited
+cp: -r non spécifié ; omission du répertoire 'dwarf-planets'
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cp dwark-planets /inhabited
+cp: impossible d'évaluer 'dwark-planets': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cp -r dwarf-planets inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd planets
+bash: cd: planets: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp -r arrakis.jpeg inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp -r coruscant.jpeg inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp-r cybertron.jpeg inhabited
+
+La commande « cp-r » n'a pas été trouvée, voulez-vous dire :
+
+  commande « cpr » du deb node-cpr
+  commande « cpgr » du deb passwd
+
+Essayez : sudo apt install <nom du deb>
+
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp -r cybertron inhabited
+cp: impossible d'évaluer 'cybertron': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd inhabited
+bash: cd: inhabited: N'est pas un dossier
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ ls
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ ls 
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ ls ..
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd reak
+bash: cd: reak: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd real
+bash: cd: real: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd /inhabited
+bash: cd: /inhabited: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ ls 
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd /fictional 
+bash: cd: /fictional: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd /inhabited
+bash: cd: /inhabited: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd /fictional
+bash: cd: /fictional: Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ ls
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/inhabited$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls
+dwarf-planets  gas-giants  jupiter.jpeg  mercury.jpeg  pluto.jpeg  uranus.jpeg
+earth.jpeg     inhabited   mars.jpeg     neptune.jpeg  telluric    venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls 
+dwarf-planets  gas-giants  jupiter.jpeg  mercury.jpeg  pluto.jpeg  uranus.jpeg
+earth.jpeg     inhabited   mars.jpeg     neptune.jpeg  telluric    venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cp earth.jpeg inhabitedwilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis.jpeg inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp coruscant.jpeg inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp cybertron.jpeg inhabited 
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls 
+dwarf-planets  gas-giants  jupiter.jpeg  mercury.jpeg  pluto.jpeg  uranus.jpeg
+earth.jpeg     inhabited   mars.jpeg     neptune.jpeg  telluric    venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ rm pluto.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ tree
+.
+├── dwarf-planets
+├── earth.jpeg
+├── gas-giants
+├── inhabited
+│   └── earth.jpeg
+├── jupiter.jpeg
+├── mars.jpeg
+├── mercury.jpeg
+├── neptune.jpeg
+├── telluric
+├── uranus.jpeg
+└── venus.jpeg
+
+4 directories, 8 files
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd..
+cd.. : commande introuvable
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ tree
+.
+├── fruits
+│   ├── banane
+│   ├── kiwi
+│   ├── pamplemousse
+│   ├── poire
+│   └── pomme
+├── legumes
+│   ├── carotte
+│   ├── chou-fleur
+│   └── chou-rave
+├── planets
+│   ├── fictional
+│   │   ├── arrakis.jpeg
+│   │   ├── coruscant.jpeg
+│   │   ├── cybertron.jpeg
+│   │   └── inhabited
+│   ├── inhabited
+│   ├── real
+│   │   ├── dwarf-planets
+│   │   ├── earth.jpeg
+│   │   ├── gas-giants
+│   │   ├── inhabited
+│   │   │   └── earth.jpeg
+│   │   ├── jupiter.jpeg
+│   │   ├── mars.jpeg
+│   │   ├── mercury.jpeg
+│   │   ├── neptune.jpeg
+│   │   ├── telluric
+│   │   ├── uranus.jpeg
+│   │   └── venus.jpeg
+│   └── saturn.jpeg
+├── planets.zip
+└── planets.zip.1
+
+10 directories, 23 files
+wilder@wilder-ThinkPad-T430:~/quetes/shell$ cd planets
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real  saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cp saturn.jpeg real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ rm saturn.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ fictional
+fictional : commande introuvable
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ rm inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls
+dwarf-planets  gas-giants  jupiter.jpeg  mercury.jpeg  saturn.jpeg  uranus.jpeg
+earth.jpeg     inhabited   mars.jpeg     neptune.jpeg  telluric     venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real/inhabited$ ls
+earth.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real/inhabited$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ ls
+fictional  inhabited  real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ fictional 
+fictional : commande introuvable
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls 
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis inhabited
+cp: impossible d'évaluer 'arrakis': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis.jpeg inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd real
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ ls
+dwarf-planets  gas-giants  jupiter.jpeg  mercury.jpeg  saturn.jpeg  uranus.jpeg
+earth.jpeg     inhabited   mars.jpeg     neptune.jpeg  telluric     venus.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/real$ cd ..
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets$ cd fictional 
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ rm inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis.jpeg /real/inhabited
+cp: impossible de créer le fichier standard '/real/inhabited': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis.jpeg real/fictional
+cp: impossible de créer le fichier standard 'real/fictional': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp ~/quetes/shell/planets/fictionnal/arrakis.jpeg ~/quetes/shell/planets/real/inhabited 
+cp: impossible d'évaluer '/home/wilder/quetes/shell/planets/fictionnal/arrakis.jpeg': Aucun fichier ou dossier de ce type
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp arrakis.jpeg ~/quetes/shell/planets/real/inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp coruscant.jpeg ~/quetes/shell/planets/real/inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cp cybertron.jpeg ~/quetes/shell/planets/real/inhabited
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ trecd
+
+La commande « trecd » n'a pas été trouvée, voulez-vous dire :
+
+  commande « tracd » du deb trac
+  commande « tred » du deb graphviz
+  commande « trend » du deb trend
+
+Essayez : sudo apt install <nom du deb>
+
+wilder@wilder-ThinkPad-T430:~/quetes/shell/planets/fictional$ cd //
+wilder@wilder-ThinkPad-T430://$  cd
+cd                 cd-fix-profile     cd-it8             
+cd-create-profile  cd-iccdump         
+wilder@wilder-ThinkPad-T430://$  cd
+wilder@wilder-ThinkPad-T430:~$ pwd
+/home/wilder
+wilder@wilder-ThinkPad-T430:~$ tree
+.
+├── Bureau
+├── Documents
+│   └── chalet
+│       ├── armoire
+│       │   ├── bibelots
+│       │   └── chalet
+│       ├── armure
+│       ├── bibelots
+│       ├── etagere
+│       ├── fauteuil
+│       └── fauteuil2
+├── examples.desktop
+├── home-contents.txt
+├── Images
+│   └── Capture d’écran de 2020-03-03 11-54-31.png
+├── marseille
+├── Modèles
+├── Musique
+├── planets
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   ├── earth.jpeg
+│   ├── jupiter.jpeg
+│   ├── mars.jpeg
+│   ├── mercury.jpeg
+│   ├── neptune.jpeg
+│   ├── pluto.jpeg
+│   ├── saturn.jpeg
+│   ├── uranus.jpeg
+│   └── venus.jpeg
+├── planets.zip
+├── Public
+├── quetes
+│   └── shell
+│       ├── fruits
+│       │   ├── banane
+│       │   ├── kiwi
+│       │   ├── pamplemousse
+│       │   ├── poire
+│       │   └── pomme
+│       ├── legumes
+│       │   ├── carotte
+│       │   ├── chou-fleur
+│       │   └── chou-rave
+│       ├── planets
+│       │   ├── fictional
+│       │   │   ├── arrakis.jpeg
+│       │   │   ├── coruscant.jpeg
+│       │   │   └── cybertron.jpeg
+│       │   ├── inhabited
+│       │   └── real
+│       │       ├── dwarf-planets
+│       │       ├── earth.jpeg
+│       │       ├── gas-giants
+│       │       ├── inhabited
+│       │       │   ├── arrakis.jpeg
+│       │       │   ├── coruscant.jpeg
+│       │       │   ├── cybertron.jpeg
+│       │       │   └── earth.jpeg
+│       │       ├── jupiter.jpeg
+│       │       ├── mars.jpeg
+│       │       ├── mercury.jpeg
+│       │       ├── neptune.jpeg
+│       │       ├── saturn.jpeg
+│       │       ├── telluric
+│       │       ├── uranus.jpeg
+│       │       └── venus.jpeg
+│       ├── planets.zip
+│       └── planets.zip.1
+├── snap
+│   └── gnome-system-monitor
+│       ├── 100
+│       ├── 127
+│       ├── common
+│       └── current -> 100
+├── Téléchargements
+│   └── Ubuntu-Reference-1.pdf
+└── Vidéos
+
+31 directories, 48 files
+wilder@wilder-ThinkPad-T430:~$ mv -r ~/quetes/shell/planets/real/inhabited ~/quetes/shell/planets
+mv : option invalide -- 'r'
+Saisissez « mv --help » pour plus d'informations.
+wilder@wilder-ThinkPad-T430:~$ cp -r -r ~/quetes/shell/planets/real/inhabited ~/quetes/shell/planets
+wilder@wilder-ThinkPad-T430:~$ pwd
+/home/wilder
+wilder@wilder-ThinkPad-T430:~$ tree
+.
+├── Bureau
+├── Documents
+│   └── chalet
+│       ├── armoire
+│       │   ├── bibelots
+│       │   └── chalet
+│       ├── armure
+│       ├── bibelots
+│       ├── etagere
+│       ├── fauteuil
+│       └── fauteuil2
+├── examples.desktop
+├── home-contents.txt
+├── Images
+│   └── Capture d’écran de 2020-03-03 11-54-31.png
+├── marseille
+├── Modèles
+├── Musique
+├── planets
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   ├── earth.jpeg
+│   ├── jupiter.jpeg
+│   ├── mars.jpeg
+│   ├── mercury.jpeg
+│   ├── neptune.jpeg
+│   ├── pluto.jpeg
+│   ├── saturn.jpeg
+│   ├── uranus.jpeg
+│   └── venus.jpeg
+├── planets.zip
+├── Public
+├── quetes
+│   └── shell
+│       ├── fruits
+│       │   ├── banane
+│       │   ├── kiwi
+│       │   ├── pamplemousse
+│       │   ├── poire
+│       │   └── pomme
+│       ├── legumes
+│       │   ├── carotte
+│       │   ├── chou-fleur
+│       │   └── chou-rave
+│       ├── planets
+│       │   ├── fictional
+│       │   │   ├── arrakis.jpeg
+│       │   │   ├── coruscant.jpeg
+│       │   │   └── cybertron.jpeg
+│       │   ├── inhabited
+│       │   │   ├── arrakis.jpeg
+│       │   │   ├── coruscant.jpeg
+│       │   │   ├── cybertron.jpeg
+│       │   │   └── earth.jpeg
+│       │   └── real
+│       │       ├── dwarf-planets
+│       │       ├── earth.jpeg
+│       │       ├── gas-giants
+│       │       ├── inhabited
+│       │       │   ├── arrakis.jpeg
+│       │       │   ├── coruscant.jpeg
+│       │       │   ├── cybertron.jpeg
+│       │       │   └── earth.jpeg
+│       │       ├── jupiter.jpeg
+│       │       ├── mars.jpeg
+│       │       ├── mercury.jpeg
+│       │       ├── neptune.jpeg
+│       │       ├── saturn.jpeg
+│       │       ├── telluric
+│       │       ├── uranus.jpeg
+│       │       └── venus.jpeg
+│       ├── planets.zip
+│       └── planets.zip.1
+├── snap
+│   └── gnome-system-monitor
+│       ├── 100
+│       ├── 127
+│       ├── common
+│       └── current -> 100
+├── Téléchargements
+│   └── Ubuntu-Reference-1.pdf
+└── Vidéos
+
+31 directories, 52 files
+wilder@wilder-ThinkPad-T430:~$ rm ~/quetes/shell/planets/real/inhabited
+rm: impossible de supprimer '/home/wilder/quetes/shell/planets/real/inhabited': est un dossier
+wilder@wilder-ThinkPad-T430:~$ rm -r ~/quetes/shell/planets/real/inhabited
+wilder@wilder-ThinkPad-T430:~$ tree
+.
+├── Bureau
+├── Documents
+│   └── chalet
+│       ├── armoire
+│       │   ├── bibelots
+│       │   └── chalet
+│       ├── armure
+│       ├── bibelots
+│       ├── etagere
+│       ├── fauteuil
+│       └── fauteuil2
+├── examples.desktop
+├── home-contents.txt
+├── Images
+│   └── Capture d’écran de 2020-03-03 11-54-31.png
+├── marseille
+├── Modèles
+├── Musique
+├── planets
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   ├── earth.jpeg
+│   ├── jupiter.jpeg
+│   ├── mars.jpeg
+│   ├── mercury.jpeg
+│   ├── neptune.jpeg
+│   ├── pluto.jpeg
+│   ├── saturn.jpeg
+│   ├── uranus.jpeg
+│   └── venus.jpeg
+├── planets.zip
+├── Public
+├── quetes
+│   └── shell
+│       ├── fruits
+│       │   ├── banane
+│       │   ├── kiwi
+│       │   ├── pamplemousse
+│       │   ├── poire
+│       │   └── pomme
+│       ├── legumes
+│       │   ├── carotte
+│       │   ├── chou-fleur
+│       │   └── chou-rave
+│       ├── planets
+│       │   ├── fictional
+│       │   │   ├── arrakis.jpeg
+│       │   │   ├── coruscant.jpeg
+│       │   │   └── cybertron.jpeg
+│       │   ├── inhabited
+│       │   │   ├── arrakis.jpeg
+│       │   │   ├── coruscant.jpeg
+│       │   │   ├── cybertron.jpeg
+│       │   │   └── earth.jpeg
+│       │   └── real
+│       │       ├── dwarf-planets
+│       │       ├── earth.jpeg
+│       │       ├── gas-giants
+│       │       ├── jupiter.jpeg
+│       │       ├── mars.jpeg
+│       │       ├── mercury.jpeg
+│       │       ├── neptune.jpeg
+│       │       ├── saturn.jpeg
+│       │       ├── telluric
+│       │       ├── uranus.jpeg
+│       │       └── venus.jpeg
+│       ├── planets.zip
+│       └── planets.zip.1
+├── snap
+│   └── gnome-system-monitor
+│       ├── 100
+│       ├── 127
+│       ├── common
+│       └── current -> 100
+├── Téléchargements
+│   └── Ubuntu-Reference-1.pdf
+└── Vidéos
+
+30 directories, 48 files
+wilder@wilder-ThinkPad-T430:~$ 
